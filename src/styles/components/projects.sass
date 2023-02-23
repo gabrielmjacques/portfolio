@@ -1,0 +1,48 @@
+@use '../mixins'
+@use '../variables'
+
+.projects
+    @include mixins.FlexCenter()
+    
+    .projects-area
+        @include mixins.FlexCenter()
+        
+        flex-direction: column
+        
+        gap: 30px
+        
+        h1
+            text-shadow: variables.$text-glitch
+    
+        .projects-render
+            @include mixins.Card(transparent, 80vw , fit-content )
+            
+            display: flex
+            justify-content: center
+            position: relative
+            
+            gap: 30px
+            max-width: 90vw
+                                    
+            
+            .projects-list
+                width: 40%
+                
+                .list-button
+                    color: white
+                    font-weight: bolder
+                    justify-content: left
+                
+                    width: 100%
+                    font-size: 1em
+                    
+                    text-shadow: 0 0 5px #ffffff88
+            
+                .list-button p
+                    transition-duration: 0.3s
+            
+                .list-button:hover p
+                    margin-left: 10px
+                    
+            .project-info
+                width: 60%

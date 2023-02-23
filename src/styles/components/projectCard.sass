@@ -1,0 +1,84 @@
+@use '../mixins'
+@use '../variables'
+
+.selected-project
+    @include mixins.FlexCenter()
+    
+    flex-direction: column
+    margin: auto
+    
+    width: 70%
+    gap: 20px
+    border-radius: 20px
+    
+    .img-container
+        overflow: hidden
+        
+        width: 90%
+        height: 250px
+        border-radius: 20px
+        
+        img 
+            width: 100%
+            transition-duration: 0.5s
+            transform: scale(1.05)
+    
+    .img-container:hover
+        img
+            transform: scale(1.08)
+    
+    .desc
+        font-weight: bold
+        
+        width: 100%
+    
+    .project-techs
+        display: flex
+        
+        gap: 10px
+        
+        button
+            font-weight: bolder
+            
+            font-size: 0.7em
+    
+    .project-buttons
+        display: flex
+        
+        width: 100%
+        
+        button
+            position: relative
+            font-weight: bold
+            overflow: hidden
+            
+            width: 50%
+            border-radius: 0
+        
+        button:nth-child(even)
+            background-color: green
+        
+        .button-icon
+            position: absolute
+            
+            bottom: -100%
+            right: 10px
+            
+            transform: translateY(50%)
+            animation: button-icon-hide 0.3s ease-in forwards
+            
+        button:hover .button-icon
+            animation: button-icon-show 0.3s ease-out forwards
+        
+        
+        @keyframes button-icon-hide
+            from
+                bottom: 50%
+            to
+                bottom: -100%
+                
+        @keyframes button-icon-show
+            from
+                bottom: -100%
+            to
+                bottom: 50%

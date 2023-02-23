@@ -1,0 +1,61 @@
+@use '../variables'
+@use '../mixins'
+
+.introduction
+    @include mixins.FlexCenter()
+    
+    color: #fff
+    
+    width: 100vw
+    min-height: 100vh
+    
+    .card
+        @include mixins.FlexCenter()
+        @include mixins.Card(transparent, 500px, fit-content)
+        
+        flex-direction: column
+        
+        max-width: 500px
+        gap: 20px
+        
+        .main-image
+            @include mixins.ImageGlitchAnim()
+            
+            width: 150px
+            
+            filter: variables.$img-glitch
+        
+        h2
+            text-shadow: variables.$text-glitch
+            
+            font-size: 2em
+        
+        p
+            font-weight: bold
+            
+            text-shadow: variables.$text-glitch
+        
+        .social-medias
+            display: flex
+            
+            gap: 10px
+            
+            button
+                cursor: pointer
+                background: none
+                border: none
+                outline: none
+                
+                opacity: 0.7
+                transition-duration: 0.5s
+            
+            button:hover
+                opacity: 1
+                
+                transform: scale(1.2) rotateZ(360deg)
+            
+            button:active
+                transform: scale(1) rotateZ(360deg)
+            
+            img
+                width: 50px

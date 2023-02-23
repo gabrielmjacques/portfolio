@@ -1,0 +1,18 @@
+@use '../variables'
+@use '../mixins'
+
+header
+    position: fixed
+    display: flex
+    justify-content: center
+    background: variables.$header-bg-color
+    
+    z-index: 5
+    width: 100%
+    top: 0
+    gap: 10px
+    padding: 10px
+    
+    box-shadow: 0 3px 10px #00000085
+    
+    @include mixins.ButtonAnim1()
