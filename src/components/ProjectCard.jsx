@@ -25,7 +25,7 @@ export default function ProjectCard( props )
         <div className='selected-project'>
 
             <div className='img-container'>
-                <img src={ props.selectedProject.img } />
+                <img src={ props.selectedProject.img } alt={ 'Imagem do projeto selecionado' } />
             </div>
 
             <h2>{ props.selectedProject.name }</h2>

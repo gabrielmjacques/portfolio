@@ -8,6 +8,8 @@ import ProjectsFile from '../ProjectsFile.js'
 export default function Projects()
 {
     const [ selectedProject, setSelectedProject ] = useState( ProjectsFile[ 0 ] )
+    const [ fadeOut, setFadeOut ] = useState( false )
+    const [ fadeIn, setFadeIn ] = useState( false )
 
     const GetProjectList = () =>
     {
@@ -20,7 +22,29 @@ export default function Projects()
                     <Button
                         variant="outlined"
                         className='list-button'
-                        onClick={ () => setSelectedProject( ProjectsFile[ i ] ) }>
+                        onClick={ () =>
+                        {
+                            if ( selectedProject != project )
+                            {
+                                setFadeOut( true )
+
+                                setTimeout( () =>
+                                {
+                                    setSelectedProject( ProjectsFile[ i ] )
+                                    setFadeOut( false )
+
+                                    setFadeIn( true )
+
+                                    setTimeout( () =>
+                                    {
+                                        setFadeIn( false )
+
+                                    }, 300 );
+
+                                }, 300 );
+                            }
+                        }
+                        }>
                         <p> { project.name } </p>
                     </Button>
 
@@ -31,7 +55,9 @@ export default function Projects()
 
     const GetSelectedProject = () =>
     {
-        return <ProjectCard selectedProject={ selectedProject } />
+        return <div className={ `${ fadeOut ? 'fade-out' : '' } ${ fadeIn ? 'fade-in' : '' }` }>
+            < ProjectCard selectedProject={ selectedProject } />
+        </div >
     }
 
     return (

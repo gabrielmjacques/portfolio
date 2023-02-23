@@ -7,11 +7,11 @@
     color: #fff
     
     width: 100vw
-    min-height: 100vh
+    min-height: 110vh
     
     .card
         @include mixins.FlexCenter()
-        @include mixins.Card(transparent, 500px, fit-content)
+        @include mixins.Card(transparent, fit-content, fit-content)
         
         flex-direction: column
         
@@ -38,24 +38,27 @@
         .social-medias
             display: flex
             
-            gap: 10px
+            gap: 30px
             
             button
                 cursor: pointer
                 background: none
+                color: white
                 border: none
                 outline: none
+                width: fit-content
                 
+                transform: scale(1.7)
                 opacity: 0.7
                 transition-duration: 0.5s
             
             button:hover
                 opacity: 1
                 
-                transform: scale(1.2) rotateZ(360deg)
+                transform: scale(2) rotateZ(360deg)
             
             button:active
-                transform: scale(1) rotateZ(360deg)
+                transform: scale(1.5) rotateZ(360deg)
             
             img
                 width: 50px

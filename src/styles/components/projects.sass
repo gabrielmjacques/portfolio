@@ -1,6 +1,17 @@
 @use '../mixins'
 @use '../variables'
 
+.fade-out
+  opacity: 0
+  margin-left: 20px
+  transition: 0.3s ease-in-out
+
+.fade-in 
+  opacity: 1
+  margin-left: 0px
+  transition: 0.3s ease-in-out
+
+
 .projects
     @include mixins.FlexCenter()
     
@@ -15,11 +26,11 @@
             text-shadow: variables.$text-glitch
     
         .projects-render
+            @include mixins.FlexCenter()            
             @include mixins.Card(transparent, 80vw , fit-content )
             
             display: flex
             justify-content: center
-            position: relative
             
             gap: 30px
             max-width: 90vw
@@ -44,5 +55,30 @@
                 .list-button:hover p
                     margin-left: 10px
                     
+                .list-button:focus
+                    box-shadow: variables.$box-glitch
+                    
             .project-info
                 width: 60%
+
+
+
+@media screen and (max-width: 550px)
+    .projects        
+        .projects-area
+            .projects-render
+                @include mixins.Card(transparent, 100vw , fit-content )
+                
+                flex-direction: column
+                
+                width: 90%
+                gap: 30px
+
+                .projects-list
+                    flex-direction: column
+                    margin: auto
+                    
+                    width: 90%
+                
+                .project-info
+                    width: 100%

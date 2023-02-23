@@ -2,9 +2,10 @@ import React from 'react'
 
 import '../styles/components/introduction.sass'
 import mainImg from '../assets/mainImg.png'
-import InstagramIcon from '../assets/instagram-icon.png'
-import GitHubIcon from '../assets/github-icon.png'
-import LinkedinIcon from '../assets/linkedin-icon.png'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Introduction()
 {
@@ -19,9 +20,18 @@ export default function Introduction()
                 <p>Front-end Developer</p>
 
                 <div className='social-medias'>
-                    <button><a href="https://github.com/gabrielmjacques" target={ '_blank' }><img src={ GitHubIcon } alt="Meu GitHub" /></a></button>
-                    <button><a href="https://www.linkedin.com/in/edson-gabriel-jacques-5b3678242/" target={ '_blank' }><img src={ LinkedinIcon } alt="Meu Linkedin" /></a></button>
-                    <button><a href="https://www.instagram.com/gabriel_gtbp/" target={ '_blank' }><img src={ InstagramIcon } alt="Meu Instagram" /></a></button>
+                    <button onClick={ () => window.open( 'https://github.com/gabrielmjacques' ) }>
+                        <GitHubIcon />
+                    </button>
+                    <button onClick={ () => window.open( 'https://www.linkedin.com/in/edson-gabriel-jacques-5b3678242/' ) }>
+                        <LinkedInIcon />
+                    </button>
+                    <button onClick={ () => window.open( 'https://www.instagram.com/gabriel_gtbp/' ) }>
+                        <InstagramIcon />
+                    </button>
+                    <button onClick={ () => window.open( 'mailto:egmoreira10@gmail.com' ) }>
+                        <EmailIcon />
+                    </button>
                 </div>
             </div>
 
