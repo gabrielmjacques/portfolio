@@ -31,7 +31,7 @@ export default function ProjectCard( props )
             <h2>{ props.selectedProject.name }</h2>
 
             <div className='desc'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptate earum distinctio eum eveniet recusandae ipsam perspiciatis, iste assumenda odio omnis et alias enim est aut ad! Modi, sunt ex!</p>
+                <p>{ props.selectedProject.desc }</p>
             </div>
 
             <div className='project-techs'>
@@ -39,8 +39,15 @@ export default function ProjectCard( props )
             </div>
 
             <div className='project-buttons'>
-                <Button variant='contained' onClick={ () => window.open( props.selectedProject.github ) }>GitHubㅤ<GitHubIcon className='button-icon' /></Button>
-                <Button variant='contained' onClick={ () => window.open( props.selectedProject.demo ) }>Demoㅤ<LaunchIcon className='button-icon' /></Button>
+
+                { props.selectedProject.github != ''
+                    ? <Button variant='contained' onClick={ () => window.open( props.selectedProject.github ) }>GitHubㅤ<GitHubIcon className='button-icon' /></Button>
+                    : '' }
+
+                { props.selectedProject.demo != ''
+                    ? <Button variant='contained' style={ { backgroundColor: 'green' } } onClick={ () => window.open( props.selectedProject.demo ) }>Demoㅤ<LaunchIcon className='button-icon' /></Button>
+                    : '' }
+
             </div>
         </div >
     )

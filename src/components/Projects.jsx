@@ -39,9 +39,9 @@ export default function Projects()
                                     {
                                         setFadeIn( false )
 
-                                    }, 300 );
+                                    }, 400 );
 
-                                }, 300 );
+                                }, 350 );
                             }
                         }
                         }>
