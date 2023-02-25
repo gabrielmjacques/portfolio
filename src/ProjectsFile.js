@@ -8,7 +8,7 @@ const projects = [
         name: 'Netflix Homepage Clone',
         img: netflixCloneReact,
         techs: [ 'React', 'JSX', 'Material Icons', 'API' ],
-        desc: 'Clone da página principal da Netflix criado em React, utilizando a API TheMovieDataBase',
+        desc: 'Clone da Netflix desenvolvido com a biblioteca React e consumindo a API do site themoviedb.org para fornecer informações sobre filmes e programas de TV para os usuários.',
         github: 'https://github.com/gabrielmjacques/netflix-clone-react',
         demo: 'https://netflix-clone-react-vert-zeta.vercel.app/'
     },
@@ -17,7 +17,7 @@ const projects = [
         name: 'Calculadora',
         img: calculator,
         techs: [ 'React', 'JSX ' ],
-        desc: 'Calculadora simples com design minimalista criada com a biblioteca React',
+        desc: 'Calculadora online desenvolvida utilizando a biblioteca React para construção de interfaces de usuário. Ao acessar o site, os usuários podem realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão.',
         github: 'https://github.com/gabrielmjacques/calculator-react',
         demo: 'https://calculator-react-umber.vercel.app/'
     },
@@ -26,7 +26,7 @@ const projects = [
         name: 'I Hate Squares',
         img: IHateSquares,
         techs: [ 'C#', 'Unity Engine' ],
-        desc: `Protótipo de jogo shoot'em up no estilo pixel art, desenvolvido na Unity Engine`,
+        desc: `"I Hate Squares" é um pequeno jogo de arcade desenvolvido por mim que desafia os jogadores a desviarem de quadrados enquanto avançam por um cenário. O jogo é projetado com gráficos simples e recursos de leaderboard para oferecer uma experiência divertida e casual para jogadores de todas as idades.`,
         github: '',
         demo: 'https://biroplayer.itch.io/i-hate-squares'
     },
