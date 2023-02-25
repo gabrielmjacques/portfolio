@@ -2,13 +2,12 @@ import React from 'react'
 
 import '../styles/components/header.sass'
 
-export default function Header()
+export default function Header( props )
 {
     return (
         <header>
             <button><p>Início</p></button>
-            <button><p>Sobre Mim</p></button>
-            <button><p>Projetos</p></button>
+            <button onClick={ () => props.scrollPage() }><p>Projetos</p></button>
         </header>
     )
 }
